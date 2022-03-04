@@ -4,10 +4,10 @@
 
 const WebSocket = require("ws");
 const port = process.env.PORT || 4050;
-//const index = require("./routes/index");
+const index = require("./routes/index");
 
 const app = express();
-//app.use(index);
+app.use(index);
 
 const server = http.createServer(app);
 
