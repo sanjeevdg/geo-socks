@@ -91,6 +91,6 @@ wss.on("connection", function connection(ws) {
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-server.listen(4001, () => {
+server.listen(80, () => {
   console.log("Listening to port 4001");
 });
