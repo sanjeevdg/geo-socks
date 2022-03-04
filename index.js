@@ -3,7 +3,7 @@
 //const io = require("socket.io")();
 
 const WebSocket = require("ws");
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 4050;
 //const index = require("./routes/index");
 
 const app = express();
@@ -91,6 +91,6 @@ wss.on("connection", function connection(ws) {
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-server.listen(80, () => {
+server.listen(4050, () => {
   console.log("Listening to port 4001");
 });
