@@ -3,7 +3,7 @@
 //const io = require("socket.io")();
 
 const WebSocket = require("ws");
-const port = process.env.PORT || 4050;
+const port = process.env.PORT || 5000;
 const index = require("./routes/index");
 
 const app = express();
@@ -92,5 +92,5 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 server.listen(4050, () => {
-  console.log("Listening to port 4050");
+  console.log("Listening to port 5000");
 });
