@@ -3,7 +3,7 @@
 //const io = require("socket.io")();
 
 const WebSocket = require("ws");
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 80;
 //const index = require("./routes/index");
 
 const app = express();
