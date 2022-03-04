@@ -1,8 +1,8 @@
  const express = require("express");
  const http = require("http");
-//const io = require("socket.io")();
+const io = require("socket.io")();
 
-const WebSocket = require("ws");
+//const WebSocket = require("ws");
 const port = process.env.PORT || 5000;
 const index = require("./routes/index");
 
@@ -11,17 +11,17 @@ app.use(index);
 
 const server = http.createServer(app);
 
-//const io = socketIo(server);
+const io = socketIo(server);
 
 let interval;
 // let position = require('./sockio/PositionSocket');
 
 // position(io);
 
-const wss = new WebSocket.Server({ server });
+//const wss = new WebSocket.Server({ server });
 
 
-/*
+
 
 io.on("connection", (socket) => {
   console.log("New client connected");
@@ -75,9 +75,9 @@ io.listen(port, {
   }
 });
 
-*/
 
 
+/*
 wss.on("connection", function connection(ws) {
   ws.on("message", function incoming(message, isBinary) {
     console.log(message.toString(), isBinary);
@@ -94,3 +94,4 @@ app.get("/", (req, res) => {
 server.listen(4050, () => {
   console.log("Listening to port 5000");
 });
+*/
