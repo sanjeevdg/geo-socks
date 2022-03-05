@@ -1,4 +1,4 @@
-// const express = require("express");
+ const express = require("express");
 // const http = require("http");
 const io = require("socket.io")();
 
@@ -20,7 +20,11 @@ let interval;
 
 //const wss = new WebSocket.Server({ server });
 
+const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send({ response: "I am alive" }).status(200);
+});
 
 
 io.on("connection", (socket) => {
