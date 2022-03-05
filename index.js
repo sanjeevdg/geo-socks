@@ -1,4 +1,4 @@
- const express = require("express");
+// const express = require("express");
 // const http = require("http");
 const io = require("socket.io")();
 
@@ -20,11 +20,11 @@ let interval;
 
 //const wss = new WebSocket.Server({ server });
 
-const router = express.Router();
+//const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send({ response: "I am alive" }).status(200);
-});
+//router.get("/", (req, res) => {
+//  res.send({ response: "I am alive" }).status(200);
+//});
 
 
 io.on("connection", (socket) => {
@@ -75,7 +75,7 @@ console.log('woo got from client'+JSON.stringify(position));
 
 io.listen(port, {
   cors: {
-    origin: ["http://127.0.0.1"]
+    origin: ["https://my-socket-web.herokuapp.com"]
   }
 });
 
