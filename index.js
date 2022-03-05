@@ -1,17 +1,17 @@
- const express = require("express");
- const http = require("http");
+// const express = require("express");
+// const http = require("http");
 const io = require("socket.io")();
 
 //const WebSocket = require("ws");
 const port = process.env.PORT || 5000;
-const index = require("./routes/index");
+//const index = require("./routes/index");
 
-const app = express();
-app.use(index);
+//const app = express();
+//app.use(index);
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-const io = socketIo(server);
+// const io = socketIo(server);
 
 let interval;
 // let position = require('./sockio/PositionSocket');
@@ -71,7 +71,7 @@ console.log('woo got from client'+JSON.stringify(position));
 
 io.listen(port, {
   cors: {
-    origin: ["http://127.0.0.1:4001"]
+    origin: ["http://127.0.0.1"]
   }
 });
 
