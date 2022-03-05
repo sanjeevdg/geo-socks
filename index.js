@@ -1,17 +1,17 @@
-// const express = require("express");
-// const http = require("http");
-const io = require("socket.io")("https://my-socket-web.com/herokuapp.com");
+ const express = require("express");
+const http = require("http");
 
 //const WebSocket = require("ws");
 const port = process.env.PORT || 5000;
-//const index = require("./routes/index");
+const index = require("./routes/index");
 
-//const app = express();
-//app.use(index);
+const app = express();
+app.use(index);
 
-// const server = http.createServer(app);
+ const server = http.createServer(app);
 
 // const io = socketIo(server);
+const io = require("socket.io")(server);
 
 let interval;
 // let position = require('./sockio/PositionSocket');
