@@ -1,6 +1,6 @@
 // const express = require("express");
 // const http = require("http");
-const io = require("socket.io")();
+const io = require("socket.io")("https://my-socket-web.com/herokuapp.com");
 
 //const WebSocket = require("ws");
 const port = process.env.PORT || 5000;
