@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
   console.log("New client connected");
 
   
-  if (interval) {
+  if (interval) { 
     clearInterval(interval);
   }
   interval = setInterval(() => getApiAndEmit(socket), 1000);
